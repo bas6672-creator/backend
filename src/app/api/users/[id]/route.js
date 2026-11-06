@@ -12,7 +12,8 @@ export async function GET(request, { params }) {
     return NextResponse.json(
       {
         success: true,
-        message: "ดึงข้อมูลผู้ใช้สำเร็จ",
+        message: `ดึงข้อมูลผู้ใช้ ID: ${id} สำเร็จ`,
+        id: id, // เพิ่ม id เข้าไปใน JSON Response
       },
       { status: 200 }
     );
@@ -39,7 +40,8 @@ export async function PUT(request, { params }) {
     return NextResponse.json(
       {
         success: true,
-        message: "แก้ไขข้อมูลผู้ใช้สำเร็จ",
+        message: `แก้ไขข้อมูลผู้ใช้ ID: ${id} สำเร็จ`,
+        id: id, // เพิ่ม id เข้าไปใน JSON Response
       },
       { status: 200 }
     );
@@ -66,7 +68,8 @@ export async function DELETE(request, { params }) {
     return NextResponse.json(
       {
         success: true,
-        message: "ลบข้อมูลผู้ใช้สำเร็จ",
+        message: `ลบข้อมูลผู้ใช้ ID: ${id} สำเร็จ`,
+        id: id, // เพิ่ม id เข้าไปใน JSON Response
       },
       { status: 200 }
     );
